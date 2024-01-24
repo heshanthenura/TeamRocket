@@ -4,6 +4,8 @@
 
 ## This app works only for data in [this](https://github.com/heshanthenura/TeamRocket/blob/main/src/main/resources/com/heshanthenura/teamrocket/TopRichestInWorld.csv) structure only.
 
+## Remember to run as administrator because it use embedded database.
+
 - ### 2024/1/24
 
 #### added database connection,update,search and delete features
