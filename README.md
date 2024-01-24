@@ -1,7 +1,14 @@
-# <h1 align="center">App made for Team Rocket</h1>
-## <h3 align="center">App made with JavaFX for team rocket</h3>
+# <h1 align="center">Proof of Concept App made for [Team Rocket](https://www.linkedin.com/company/weareteamrocketofficial/?originalSubdomain=uk)</h1>
 
 <img align="center" src="icon/logo.jpeg">
+
+## This app works only for data in [this](https://github.com/heshanthenura/TeamRocket/blob/main/src/main/resources/com/heshanthenura/teamrocket/TopRichestInWorld.csv) structure only.
+
+- ### 2024/1/24
+
+#### added database connection,update,search and delete features
+<img src="https://private-user-images.githubusercontent.com/75155192/299426105-7ea48fe1-ec34-45a4-b697-009ba231783a.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDYxMjI3NTUsIm5iZiI6MTcwNjEyMjQ1NSwicGF0aCI6Ii83NTE1NTE5Mi8yOTk0MjYxMDUtN2VhNDhmZTEtZWMzNC00NWE0LWI2OTctMDA5YmEyMzE3ODNhLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTI0VDE4NTQxNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWJjOThjZDdiYzI1ODM0MDMyNzgxZGEwYzUxYjNlM2M3N2VhYzQxOTliNDI0Y2ZiMTRhN2ZmYzU0YmY4MTE1ZWUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.CwjLVAtqLd18SCFbDgO2-uYNfXp2vGWIMV2zTeAK7IM">
+
 
 - ### 2024/1/23
 
