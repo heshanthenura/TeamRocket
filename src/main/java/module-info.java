@@ -2,6 +2,7 @@ module com.heshanthenura.teamrocket {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.logging;
+    requires java.sql;
     requires com.opencsv;
 
 
