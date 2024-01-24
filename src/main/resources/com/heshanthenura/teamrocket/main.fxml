@@ -1,28 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.heshanthenura.teamrocket.MainController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="1282.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.heshanthenura.teamrocket.MainController">
    <children>
-      <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox>
+            <AnchorPane>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="We Are Team Rocket">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
-                  </Text>
+                  <HBox alignment="CENTER" spacing="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="42.0" prefWidth="170.0">
+                           <children>
+                              <Label text="Name" />
+                              <TextField fx:id="nameField" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="146.0">
+                           <children>
+                              <Label text="NetWorth" />
+                              <TextField fx:id="netWorthField" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="97.0" layoutY="10.0" prefHeight="42.0" prefWidth="65.0">
+                           <children>
+                              <Label text="Age" />
+                              <TextField fx:id="ageField" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="184.0" layoutY="10.0" prefHeight="42.0" prefWidth="197.0">
+                           <children>
+                              <Label text="Contry/Territory" />
+                              <TextField fx:id="countryOrTerritoryField" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="271.0" layoutY="10.0" prefHeight="42.0" prefWidth="173.0">
+                           <children>
+                              <Label text="Source" />
+                              <TextField fx:id="sourceField" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="606.0" layoutY="10.0" prefHeight="42.0" prefWidth="169.0">
+                           <children>
+                              <Label text="Industry" />
+                              <TextField fx:id="industryField" prefHeight="25.0" prefWidth="107.0" />
+                           </children>
+                        </VBox>
+                        <HBox alignment="BOTTOM_CENTER" spacing="8.0">
+                           <children>
+                              <Button fx:id="updateBtn" mnemonicParsing="false" text="Update" />
+                              <Button fx:id="searchBtn" layoutX="65.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#searchPersons" text="Search" />
+                              <Button fx:id="deleteBtn" layoutX="10.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#deleteSelectedPerson" text="Delete" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
-            <TableView fx:id="dataTable" VBox.vgrow="ALWAYS">
+            </AnchorPane>
+            <TableView fx:id="dataTable" editable="true" VBox.vgrow="ALWAYS">
               <columns>
                 <TableColumn fx:id="nameColumn" minWidth="0.0" prefWidth="89.0" text="Name" />
                   <TableColumn fx:id="netWorthColumn" minWidth="0.0" prefWidth="89.0" text="NetWorth" />
