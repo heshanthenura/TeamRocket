@@ -2,10 +2,10 @@ package com.heshanthenura.teamrocket.Services;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 
+import com.heshanthenura.teamrocket.Database.DBServices;
 import com.heshanthenura.teamrocket.Entity.Person;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
@@ -15,6 +15,8 @@ import javafx.collections.ObservableList;
 public class CSVService {
 
     Logger logger = Logger.getLogger("info");
+
+    DBServices dbServices = new DBServices();
 
     static ObservableList<Person> personList = FXCollections.observableArrayList();
 
@@ -30,7 +32,11 @@ public class CSVService {
                 String s = d[4];
                 String i = d[5];
                 logger.info(netWorth);
-                personList.add(new Person(name, (netWorth), age, c, s, i));
+                Person person = new Person(name, (netWorth), age, c, s, i);
+                new Thread(()->{
+                    dbServices.addPerson(person);
+                }).start();
+                personList.add(person);
             } catch (Exception e) {
                 logger.info(String.valueOf(e));
             }

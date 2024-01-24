@@ -1,5 +1,6 @@
 package com.heshanthenura.teamrocket;
 
+import com.heshanthenura.teamrocket.Database.DBServices;
 import com.heshanthenura.teamrocket.Entity.Person;
 import com.heshanthenura.teamrocket.Services.CSVService;
 import com.opencsv.exceptions.CsvException;
@@ -31,7 +32,6 @@ public class MainController implements Initializable {
 
     @FXML
     private TableView<Person> dataTable;
-
     @FXML
     private TableColumn<Person, String> nameColumn;
     @FXML
@@ -44,8 +44,10 @@ public class MainController implements Initializable {
     private TableColumn<Person, String> sourceColumn;
     @FXML
     private TableColumn<Person, String> industryColumn;
-    ObservableList<Person> personList = FXCollections.observableArrayList();
 
+
+    ObservableList<Person> personList = FXCollections.observableArrayList();
+    DBServices dbServices = new DBServices();
     Logger logger = Logger.getLogger("info");
 
     @Override
@@ -66,19 +68,21 @@ public class MainController implements Initializable {
     }
 
     void populateTable(){
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        netWorthColumn.setCellValueFactory(new PropertyValueFactory<>("netWorth"));
-        ageColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
-        countryOrTerritoryColumn.setCellValueFactory(new PropertyValueFactory<>("countryOrTerritory"));
-        sourceColumn.setCellValueFactory(new PropertyValueFactory<>("source"));
-        industryColumn.setCellValueFactory(new PropertyValueFactory<>("industry"));
+        Platform.runLater(()->{
+            nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+            netWorthColumn.setCellValueFactory(new PropertyValueFactory<>("netWorth"));
+            ageColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
+            countryOrTerritoryColumn.setCellValueFactory(new PropertyValueFactory<>("countryOrTerritory"));
+            sourceColumn.setCellValueFactory(new PropertyValueFactory<>("source"));
+            industryColumn.setCellValueFactory(new PropertyValueFactory<>("industry"));
 
 //       personList.addAll(
 //                new Person("John Doe", "1000000", 30, "USA", "Tech Corp", "IT"),
 //                new Person("Jane Smith", "1500000", 35, "UK", "Finance Ltd", "Finance")
 //        );
-
-        dataTable.setItems(personList);
+            personList.addAll(dbServices.getAllPersons());
+            dataTable.setItems(personList);
+        });
     }
 
     void onDragOver(DragEvent event) {
@@ -87,6 +91,7 @@ public class MainController implements Initializable {
         }
         event.consume();
     }
+
     void onDragDropped(DragEvent event) throws IOException, CsvException {
         Dragboard dragboard = event.getDragboard();
         boolean success = false;
