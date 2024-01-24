@@ -1,6 +1,7 @@
 # <h1 align="center">App made for Team Rocket</h1>
 ## <h3 align="center">App made with JavaFX for team rocket</h3>
 
+<img src="icon/logo.jpeg">
 
 - ### 2024/1/23
 
