@@ -33,7 +33,7 @@ jobs:
 
       - name: Check jpackage availability
         run: |
-          jpackage --input build\libs\ --name Demo --main-jar Demo-1.0-SNAPSHOT.jar --main-class com.heshanthenura.teamrocket.Launcher --type msi --win-dir-chooser --dest build\win\ --win-menu --win-shortcut --app-version 1.0 --vendor "Heshan Thenura" -icon icon/logo.ico
+          jpackage --input build\libs\ --name Demo --main-jar Demo-1.0-SNAPSHOT.jar --main-class com.heshanthenura.teamrocket.Launcher --type msi --win-dir-chooser --dest build\win\ --win-menu --win-shortcut --app-version 1.0 --vendor "Heshan Thenura" --icon icon/logo.ico
 
       - name: List contents of build/win directory
         run: dir build\win
