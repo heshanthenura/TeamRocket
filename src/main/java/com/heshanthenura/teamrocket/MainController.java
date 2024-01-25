@@ -159,7 +159,6 @@ public class MainController implements Initializable {
         }
     }
 
-
     void clearFormFields() {
         nameField.clear();
         netWorthField.clear();
