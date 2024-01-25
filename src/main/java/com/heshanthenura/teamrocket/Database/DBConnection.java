@@ -18,7 +18,7 @@ public class DBConnection {
         return DriverManager.getConnection(DB_URL, USER, PASSWORD);
     }
 
-    public static void closeConnection(Connection connection) {
+    public void closeConnection(Connection connection) {
         if (connection != null) {
             try {
                 connection.close();
@@ -29,7 +29,7 @@ public class DBConnection {
         }
     }
 
-    public static void createPersonTable() {
+    public void createPersonTable() {
         try (Connection connection = getConnection()) {
             String createTableSQL = "CREATE TABLE IF NOT EXISTS person ("
                     + "id INT AUTO_INCREMENT PRIMARY KEY, "
@@ -50,6 +50,6 @@ public class DBConnection {
     }
 
     public static void main(String[] args) {
-        createPersonTable();
+//        createPersonTable();
     }
 }

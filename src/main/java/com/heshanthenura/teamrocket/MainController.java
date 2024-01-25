@@ -1,5 +1,6 @@
 package com.heshanthenura.teamrocket;
 
+import com.heshanthenura.teamrocket.Database.DBConnection;
 import com.heshanthenura.teamrocket.Database.DBServices;
 import com.heshanthenura.teamrocket.Entity.Person;
 import com.heshanthenura.teamrocket.Services.CSVService;
@@ -86,25 +87,25 @@ public class MainController implements Initializable {
 
     @FXML
     void searchPersons(MouseEvent event) {
-            String name = nameField.getText();
-            String netWorth = netWorthField.getText();
-            Integer age = (ageField.getText().isEmpty()) ? null : Integer.parseInt(ageField.getText());
-            String countryOrTerritory = countryOrTerritoryField.getText();
-            String source = sourceField.getText();
-            String industry = industryField.getText();
-            ObservableList<Person> searchResults = dbServices.searchPersons(name, netWorth, age, countryOrTerritory, source, industry);
-            personList.setAll(searchResults);
+        String name = nameField.getText();
+        String netWorth = netWorthField.getText();
+        Integer age = (ageField.getText().isEmpty()) ? null : Integer.parseInt(ageField.getText());
+        String countryOrTerritory = countryOrTerritoryField.getText();
+        String source = sourceField.getText();
+        String industry = industryField.getText();
+        ObservableList<Person> searchResults = dbServices.searchPersons(name, netWorth, age, countryOrTerritory, source, industry);
+        personList.setAll(searchResults);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        Platform.runLater(()->{
+        Platform.runLater(() -> {
             populateTable();
             getSelectedPersonData();
             dataTable.setItems(personList);
             root.setOnDragOver(this::onDragOver);
-            root.setOnDragDropped(e->{
+            root.setOnDragDropped(e -> {
                 try {
                     onDragDropped(e);
                 } catch (IOException | CsvException ex) {
@@ -116,15 +117,18 @@ public class MainController implements Initializable {
 
     }
 
-    void populateTable(){
-        Platform.runLater(()->{
+    void populateTable() {
+        Platform.runLater(() -> {
             nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
             netWorthColumn.setCellValueFactory(new PropertyValueFactory<>("netWorth"));
             ageColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
             countryOrTerritoryColumn.setCellValueFactory(new PropertyValueFactory<>("countryOrTerritory"));
             sourceColumn.setCellValueFactory(new PropertyValueFactory<>("source"));
             industryColumn.setCellValueFactory(new PropertyValueFactory<>("industry"));
+            new DBConnection().createPersonTable();
+
             personList.addAll(dbServices.getAllPersons());
+
             dataTable.setItems(personList);
         });
     }
@@ -156,7 +160,6 @@ public class MainController implements Initializable {
     }
 
 
-
     void clearFormFields() {
         nameField.clear();
         netWorthField.clear();
@@ -184,7 +187,7 @@ public class MainController implements Initializable {
                 personList.addAll(new CSVService().getPersonData(filePath));
                 logger.info("Done");
                 logger.info(String.valueOf(personList.size()));
-               }
+            }
             success = true;
         }
         event.setDropCompleted(success);
