@@ -1,0 +1,53 @@
+#root {
+    -fx-background-color: #a6e0ff;
+}
+
+.input, .button, .lbl {
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.button {
+    -fx-background-color: #0e0637;
+    -fx-text-fill: #fff;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-width: 0;
+}
+
+.table-view .column-header-background .filler {
+    -fx-padding: 0;
+}
+
+.table-row-cell {
+    -fx-border-width: 0 0 1 0; /* Add bottom border for horizontal lines */
+    -fx-border-color: #2980b9; /* Color of the horizontal lines */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f2f2f2; /* Color for odd rows */
+}
+
+.table-row-cell:even {
+    -fx-background-color: #ffffff; /* Color for even rows */
+}
+
+.table-cell {
+    -fx-border-width: 0;
+    -fx-padding: 0; /* Remove any padding */
+}
+
+.table-view .scroll-bar:vertical, .table-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-visibility: hidden;
+    -fx-pref-width: 0; /* Set width to 0 to minimize the space */
+}

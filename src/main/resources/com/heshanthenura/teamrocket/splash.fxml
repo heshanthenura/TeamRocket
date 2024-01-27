@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" style="-fx-background-color: none;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.heshanthenura.teamrocket.SplashController">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="43.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@logo.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

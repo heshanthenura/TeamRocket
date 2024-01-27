@@ -6,59 +6,107 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="1282.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.heshanthenura.teamrocket.MainController">
+<AnchorPane id="root" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="831.0" prefWidth="1320.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.heshanthenura.teamrocket.MainController">
    <children>
       <VBox alignment="TOP_CENTER" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane>
                <children>
-                  <HBox alignment="CENTER" spacing="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0" spacing="12.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <VBox alignment="CENTER" prefHeight="42.0" prefWidth="170.0">
+                        <ImageView fitHeight="101.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo.jpeg" />
+                           </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" spacing="16.0">
                            <children>
-                              <Label text="Name" />
-                              <TextField fx:id="nameField" />
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="146.0">
-                           <children>
-                              <Label text="NetWorth" />
-                              <TextField fx:id="netWorthField" />
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER" layoutX="97.0" layoutY="10.0" prefHeight="42.0" prefWidth="65.0">
-                           <children>
-                              <Label text="Age" />
-                              <TextField fx:id="ageField" />
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER" layoutX="184.0" layoutY="10.0" prefHeight="42.0" prefWidth="197.0">
-                           <children>
-                              <Label text="Contry/Territory" />
-                              <TextField fx:id="countryOrTerritoryField" />
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER" layoutX="271.0" layoutY="10.0" prefHeight="42.0" prefWidth="173.0">
-                           <children>
-                              <Label text="Source" />
-                              <TextField fx:id="sourceField" />
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER" layoutX="606.0" layoutY="10.0" prefHeight="42.0" prefWidth="169.0">
-                           <children>
-                              <Label text="Industry" />
-                              <TextField fx:id="industryField" prefHeight="25.0" prefWidth="107.0" />
-                           </children>
-                        </VBox>
-                        <HBox alignment="BOTTOM_CENTER" spacing="8.0">
-                           <children>
-                              <Button fx:id="updateBtn" mnemonicParsing="false" text="Update" />
-                              <Button fx:id="searchBtn" layoutX="65.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#searchPersons" text="Search" />
-                              <Button fx:id="deleteBtn" layoutX="10.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#deleteSelectedPerson" text="Delete" />
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="42.0" prefWidth="170.0">
+                                 <children>
+                                    <Label styleClass="lbl" text="Name">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="nameField" styleClass="input" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="146.0">
+                                 <children>
+                                    <Label styleClass="lbl" text="NetWorth">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="netWorthField" styleClass="input" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" layoutX="97.0" layoutY="10.0" prefHeight="42.0" prefWidth="65.0">
+                                 <children>
+                                    <Label styleClass="lbl" text="Age">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ageField" styleClass="input" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" layoutX="184.0" layoutY="10.0" prefHeight="42.0" prefWidth="197.0">
+                                 <children>
+                                    <Label styleClass="lbl" text="Contry/Territory">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="countryOrTerritoryField" styleClass="input" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" layoutX="271.0" layoutY="10.0" prefHeight="42.0" prefWidth="173.0">
+                                 <children>
+                                    <Label styleClass="lbl" text="Source">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sourceField" styleClass="input" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" layoutX="606.0" layoutY="10.0" prefHeight="42.0" prefWidth="169.0">
+                                 <children>
+                                    <Label styleClass="lbl" text="Industry">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="industryField" prefHeight="25.0" prefWidth="107.0" styleClass="input" />
+                                 </children>
+                              </VBox>
+                              <HBox alignment="BOTTOM_CENTER" spacing="8.0">
+                                 <children>
+                                    <Button fx:id="updateBtn" mnemonicParsing="false" text="Update">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="searchBtn" layoutX="65.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#searchPersons" text="Search">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="deleteBtn" layoutX="10.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#deleteSelectedPerson" text="Delete">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
                            </children>
                         </HBox>
                      </children>
