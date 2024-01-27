@@ -6,6 +6,10 @@
 
 ## Remember to install is somewhere you dont need admin permission to read or write file cuz it uses embedded database.
 
+- ### 2024/1/27
+#### added styles, splash and some touch ups.
+<img src="https://private-user-images.githubusercontent.com/75155192/300169079-a940e763-0245-496a-b312-922114544e0f.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDYzNDc5NjMsIm5iZiI6MTcwNjM0NzY2MywicGF0aCI6Ii83NTE1NTE5Mi8zMDAxNjkwNzktYTk0MGU3NjMtMDI0NS00OTZhLWIzMTItOTIyMTE0NTQ0ZTBmLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTI3VDA5Mjc0M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTAxNDE4ZTFlZDRhNDhkNGM0ZGZmYzQwZTkzMWM5N2Y0ZGY3ZDNmNmMzMjUzYTQ0YzhjMDZkMzQ3ZGQxM2NjYjkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.pjluI8sfD6BO_LYBmopZ7h_wkwxLIE_H3L2LdvYJAEw">
+
 - ### 2024/1/24
 
 #### added database connection,update,search and delete features
